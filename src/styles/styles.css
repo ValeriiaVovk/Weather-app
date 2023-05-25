@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+}
+
+/* Header-component */
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-of-app {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #4793FF;
+}
+
+.search-img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.search-info input {
+  border: none;
+  outline: 0;
+  padding: 8px 20px;
+  font-size: 16px;
+  color: black;
+  background: rgb(222, 237, 243);
+  border-radius: 30px;
+}
+.search-info button {
+  border: none;
+  outline: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+/* Main-component */
+.main-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* WeatherDay-component */
+.day-container {
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.temp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 67px;
+}
+.temp-info_number {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 117px;
+  color: #4793FF;
+}
+.temp-info_weekday {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+}
+
+.img-info img {
+  width: 119px;
+  height: 119px;
+}
+
+.weather-city {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #939CB0;
+}
+
+.error {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #cd0a00;
+}
+
+/* WeatherDetails-component */
+.details-container {
+  background: #FFFFFF;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  padding-top: 35px;
+  padding-left: 32px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 750px;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details_img {
+  background: #FFFFFF;
+  box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details_img img {
+  width: 25px;
+  height: 25px;
+}
+.details_indicator {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #939CB0;
+  margin-right: 20px;
+}
+.details_information {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+/* Weather Days-component */
+.weather-container {
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.card {
+  background: rgba(71, 147, 255, 0.2);
+  border-radius: 10px;
+  padding: 11px;
+  width: 150px;
+}
+.card_day {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  padding-bottom: 12px;
+}
+.card_date {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #939CB0;
+  padding-top: 7px;
+  padding-bottom: 12px;
+}
+.card img {
+  width: 48px;
+  height: 48px;
+  padding-bottom: 12px;
+}
+.card_temp_max {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.card_temp_min {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #939CB0;
+}/*# sourceMappingURL=styles.css.map */
