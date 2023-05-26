@@ -17,9 +17,11 @@ function CurrentWeather() {
 
   //   const API_KEY = "dd8bbbe6e0f348fca2e131858232405";
   const [forecastData, setForecastData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const gettingWeather = async (city) => {
     try {
+      setIsLoading(true);
       const response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=dd8bbbe6e0f348fca2e131858232405&q=${city}&days=4&aqi=no&alerts=no`
       );
@@ -49,6 +51,8 @@ function CurrentWeather() {
       }
     } catch (error) {
       console.log("Error fetching weather data:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -56,26 +60,32 @@ function CurrentWeather() {
   return (
     <div className="App">
       <Header weatherMethod={gettingWeather} />
-      <div className="main-container">
-        <div>
-          <WeatherDay
-            current_temp={Math.round(weatherData.current_temp)}
-            city={weatherData.city}
-            error={weatherData.error}
-          />
-        </div>
-        <div>
-          <WeatherDetails
-            current_temp={Math.round(weatherData.current_temp)}
-            city={weatherData.city}
-            feels_like={Math.round(weatherData.feels_like)}
-            weather_description={weatherData.weather_description}
-            sunrise={weatherData.sunrise}
-            sunset={weatherData.sunset}
-          />
-        </div>
-      </div>
-      <WeatherForDays forecastData={forecastData} />
+      {isLoading ? ( 
+        <div className="isloading">Loading...</div>
+      ) : (
+        <>
+          <div className="main-container">
+            <div>
+              <WeatherDay
+                current_temp={Math.round(weatherData.current_temp)}
+                city={weatherData.city}
+                error={weatherData.error}
+              />
+            </div>
+            <div>
+              <WeatherDetails
+                current_temp={Math.round(weatherData.current_temp)}
+                city={weatherData.city}
+                feels_like={Math.round(weatherData.feels_like)}
+                weather_description={weatherData.weather_description}
+                sunrise={weatherData.sunrise}
+                sunset={weatherData.sunset}
+              />
+            </div>
+          </div>
+          <WeatherForDays forecastData={forecastData} />
+        </>
+      )}
     </div>
   );
 }
