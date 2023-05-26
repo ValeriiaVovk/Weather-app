@@ -266,4 +266,63 @@
   line-height: 30px;
   color: #000000;
   text-align: center;
+}
+
+/*AboutApp*/
+.about-container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.about {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #003278;
+  padding-top: 20px;
+  text-align: center;
+}
+.about_header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  padding-top: 20px;
+}
+.about_list {
+  padding-top: 20px;
+  color: #000000;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.about_list-item {
+  padding-top: 10px;
+}
+
+/*Header*/
+.header {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #b1d1ff;
+}
+
+.link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
 }/*# sourceMappingURL=styles.css.map */
