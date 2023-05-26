@@ -1,5 +1,8 @@
 import React from "react";
 import tempImg from "../images/temp.svg";
+import dayImg from "../images/cloudy-day.png";
+import sunriseImg from "../images/sunrise.png";
+import sunsetImg from "../images/sunset.png";
 
 function WeatherDetails(props) {
   return (
@@ -18,21 +21,21 @@ function WeatherDetails(props) {
           </div>
           <div className="details">
             <div className="details_img">
-              <img src={tempImg} alt="Temperature" />
+              <img src={dayImg} alt="Weather description" />
             </div>
             <p className="details_indicator">Weather description</p>
             <p className="details_information">{props.weather_description}</p>
           </div>
           <div className="details">
             <div className="details_img">
-              <img src={tempImg} alt="Temperature" />
+              <img src={sunriseImg} alt="Sunrise" />
             </div>
             <p className="details_indicator">Sunrise</p>
             <p className="details_information">{props.sunrise}</p>
           </div>
           <div className="details">
             <div className="details_img">
-              <img src={tempImg} alt="Temperature" />
+              <img src={sunsetImg} alt="Sunset" />
             </div>
             <p className="details_indicator">Sunset</p>
             <p className="details_information">{props.sunset}</p>

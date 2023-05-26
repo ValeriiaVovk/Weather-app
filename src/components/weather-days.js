@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import closeImg from '../images/close.png';
+import shortsImg from "../images/shirt-shorts.jpg";
+import hoodieImg from "../images/hoodie-pants.jpg";
+import jacketImg from "../images/jacket.png";
+import coatImg from "../images/coat.png";
+import winterImg from "../images/winter-jacket.png";
 
 function WeatherForDays({ forecastData }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -126,6 +131,20 @@ function WeatherForDays({ forecastData }) {
     return null;
   };
 
+  const getWeatherImage = (temperature) => {
+    if (temperature > 20) {
+      return shortsImg;
+    } else if (temperature >= 15 && temperature <= 20) {
+      return hoodieImg;
+    } else if (temperature >= 5 && temperature < 15) {
+      return jacketImg;
+    } else if (temperature >= 0 && temperature < 5) {
+      return coatImg;
+    } else {
+      return winterImg;
+    }
+  };
+
   const renderWeatherCards = () => {
     return forecastData.map((day, index) => (
       <div className="card" key={index}>
@@ -133,7 +152,11 @@ function WeatherForDays({ forecastData }) {
           {day.date}
         </a>
         <br />
-        <img src={day.day.condition.icon} alt={day.day.condition.text} />
+        <img
+          src={getWeatherImage(day.day.maxtemp_c)}
+          alt={day.day.condition.text}
+          title={day.day.condition.text}
+        />
         <p className="card_temp">{day.day.maxtemp_c}</p>
         <p className="card_temp_min">{day.day.mintemp_c}</p>
       </div>
