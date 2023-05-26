@@ -48,6 +48,7 @@ function CurrentWeather() {
           sunset: undefined,
           error: "Enter a name of city!",
         });
+        setForecastData([]);
       }
     } catch (error) {
       console.log("Error fetching weather data:", error);

@@ -27,106 +27,122 @@ function WeatherForDays({ forecastData }) {
   
 
   const renderModalContent = () => {
-    const { day } = forecastData[expandedIndex];
-    const { astro } = forecastData[expandedIndex];
-    if (expandedIndex === 0) {
-      return (
-        <div className="forecast forecast-first">
-          <div className="details-forecast">
-            <p className="details_indicator">Temperature</p>
-            <p className="details_information">
-              Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
-            </p>
+    if (expandedIndex !== null) {
+      const { day } = forecastData[expandedIndex];
+      const { astro } = forecastData[expandedIndex];
+      if (expandedIndex === 0) {
+        return (
+          <div className="forecast">
+            <div className="details-forecast">
+              <p className="details_indicator">Temperature</p>
+              <p className="details_information">
+                Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
+              </p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Weather description</p>
+              <p className="details_information">{day.condition.text}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunrise</p>
+              <p className="details_information">{astro.sunrise}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunset</p>
+              <p className="details_information">{astro.sunset}</p>
+            </div>
+            <div>
+              <button onClick={closeModal} className="button-modal">
+                <img src={closeImg} alt="close" className="close-img" />
+              </button>
+            </div>
           </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Weather description</p>
-            <p className="details_information">{day.condition.text}</p>
+        );
+      } else if (expandedIndex === 1) {
+        return (
+          <div className="forecast">
+            <div className="details-forecast">
+              <p className="details_indicator">Temperature</p>
+              <p className="details_information">
+                Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
+              </p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Weather description</p>
+              <p className="details_information">{day.condition.text}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunrise</p>
+              <p className="details_information">{astro.sunrise}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunset</p>
+              <p className="details_information">{astro.sunset}</p>
+            </div>
+            <div>
+              <button onClick={closeModal} className="button-modal">
+                <img src={closeImg} alt="close" className="close-img" />
+              </button>
+            </div>
           </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunrise</p>
-            <p className="details_information">{astro.sunrise}</p>
+        );
+      } else if (expandedIndex === 2) {
+        return (
+          <div className="forecast">
+            <div className="details-forecast">
+              <p className="details_indicator">Temperature</p>
+              <p className="details_information">
+                Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
+              </p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Weather description</p>
+              <p className="details_information">{day.condition.text}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunrise</p>
+              <p className="details_information">{astro.sunrise}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunset</p>
+              <p className="details_information">{astro.sunset}</p>
+            </div>
+            <div>
+              <button onClick={closeModal} className="button-modal">
+                <img src={closeImg} alt="close" className="close-img" />
+              </button>
+            </div>
           </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunset</p>
-            <p className="details_information">{astro.sunset}</p>
+        );
+      } else if (expandedIndex === 3) {
+        return (
+          <div className="forecast">
+            <div className="details-forecast">
+              <p className="details_indicator">Temperature</p>
+              <p className="details_information">
+                Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
+              </p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Weather description</p>
+              <p className="details_information">{day.condition.text}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunrise</p>
+              <p className="details_information">{astro.sunrise}</p>
+            </div>
+            <div className="details-forecast">
+              <p className="details_indicator">Sunset</p>
+              <p className="details_information">{astro.sunset}</p>
+            </div>
+            <div>
+              <button onClick={closeModal} className="button-modal">
+                <img src={closeImg} alt="close" className="close-img" />
+              </button>
+            </div>
           </div>
-          <div onClose={closeModal}>
-            <button onClose={closeModal}>
-              <img src={closeImg} className="close-img" />
-            </button>
-          </div>
-        </div>
-      );
-    } else if (expandedIndex === 1) {
-      return (
-        <div className="forecast forecast-first">
-          <div className="details-forecast">
-            <p className="details_indicator">Temperature</p>
-            <p className="details_information">
-              Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
-            </p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Weather description</p>
-            <p className="details_information">{day.condition.text}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunrise</p>
-            <p className="details_information">{astro.sunrise}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunset</p>
-            <p className="details_information">{astro.sunset}</p>
-          </div>
-        </div>
-      );
-    } else if (expandedIndex === 2) {
-      return (
-        <div className="forecast forecast-first">
-          <div className="details-forecast">
-            <p className="details_indicator">Temperature</p>
-            <p className="details_information">
-              Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
-            </p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Weather description</p>
-            <p className="details_information">{day.condition.text}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunrise</p>
-            <p className="details_information">{astro.sunrise}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunset</p>
-            <p className="details_information">{astro.sunset}</p>
-          </div>
-        </div>
-      );
-    } else if (expandedIndex === 3) {
-      return (
-        <div className="forecast forecast-first">
-          <div className="details-forecast">
-            <p className="details_indicator">Temperature</p>
-            <p className="details_information">
-              Max - {day.maxtemp_c}°C, min - {day.mintemp_c}°C
-            </p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Weather description</p>
-            <p className="details_information">{day.condition.text}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunrise</p>
-            <p className="details_information">{astro.sunrise}</p>
-          </div>
-          <div className="details-forecast">
-            <p className="details_indicator">Sunset</p>
-            <p className="details_information">{astro.sunset}</p>
-          </div>
-          
-        </div>
-      );
+        );
+      }
     }
     return null;
   };
@@ -171,7 +187,7 @@ function WeatherForDays({ forecastData }) {
             {showModal && (
                 <div>
                     {renderModalContent()}
-                    <div onClose={closeModal}>
+                    <div onClick={closeModal}>
                              
                     </div>
                 </div>
