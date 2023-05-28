@@ -28,7 +28,7 @@ function AboutApp() {
           </ul>
         </li>
         <li className="about_list-item">
-          Windows with four-day weather have their own features.
+          Windows with four-day weather have their own features:
           <ul>
             <li>
               by clicking on the date, a modal window with more detailed
@@ -40,7 +40,7 @@ function AboutApp() {
               over it with the mouse will show a description of the weather);
             </li>
             <li>
-              the highest and lowest temperatures for the day are shown below
+              the highest and lowest temperatures for the day are shown below.
             </li>
           </ul>
         </li>

@@ -26,7 +26,7 @@ function CurrentWeather() {
         `http://api.weatherapi.com/v1/forecast.json?key=dd8bbbe6e0f348fca2e131858232405&q=${city}&days=4&aqi=no&alerts=no`
       );
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (city) {
         setWeatherData({
           current_temp: data.current.temp_c,
