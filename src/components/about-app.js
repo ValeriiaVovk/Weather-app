@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutApp() {
   return (
-    <div className="about-container">
+    <div className="about-container" data-testid="about-app">
       <h1 className="about">About this Weather-app</h1>
       <h2 className="about_header">
         This application has the following features:

@@ -59,9 +59,9 @@ function CurrentWeather() {
 
 
   return (
-    <div className="App">
+    <div className="App" data-testid="current-weather">
       <Header weatherMethod={gettingWeather} />
-      {isLoading ? ( 
+      {isLoading ? (
         <div className="isloading">Loading...</div>
       ) : (
         <>
